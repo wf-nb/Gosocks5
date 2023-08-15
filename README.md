@@ -16,3 +16,5 @@ wget -N --no-check-certificate -O gosocks5.sh https://cdn.jsdelivr.net/gh/wf-nb/
 ```bash
 wget -N --no-check-certificate -O gosocks5.sh https://github.weifeng.workers.dev/https://github.com/wf-nb/Gosocks5/blob/master/gosocks5.sh && chmod +x gosocks5.sh && bash gosocks5.sh
 ```
+## 特别鸣谢
+二进制文件来自：(https://github.com/0990/socks5)

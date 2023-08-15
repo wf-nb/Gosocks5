@@ -3,7 +3,7 @@ All_Path=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export All_Path
 
 #脚本版本
-Shell_Version="1.0.0"
+Shell_Version="1.1.0"
 #定义输出
 Font_Green="\033[32m"
 Font_Red="\033[31m"

@@ -167,7 +167,7 @@ Description=socks5
 [Service]
 Restart=always
 RestartSec=5
-ExecStart=/etc/gosocks5/socks5
+ExecStart=/etc/gosocks5/socks5 -c /etc/gosocks5/socks5.json
 
 [Install]
 WantedBy=multi-user.target" > socks5.service

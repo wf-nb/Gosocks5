@@ -119,9 +119,9 @@ function Install_Socks5() {
         exit 1
     else
         echo -e "${Info} 正在安装Socks5 请耐心等待一段时间"
-        wget https://github.com/0990/socks5/releases/download/v1.0.0/socks5_1.0.0_Linux_${Bit}.tar.gz
+        wget https://github.com/0990/socks5/releases/download/v1.0.5/socks5_1.0.5_Linux_${Bit}.tar.gz
         if [ $? -ne 0 ]; then
-            echo -e "${Error} 安装失败 请手动执行\"wget https://github.com/0990/socks5/releases/download/v1.0.0/socks5_1.0.0_Linux_${Bit}.tar.gz\"并检查错误"
+            echo -e "${Error} 安装失败 请手动执行\"wget https://github.com/0990/socks5/releases/download/v1.0.5/socks5_1.0.5_Linux_${Bit}.tar.gz\"并检查错误"
             exit 1
         else
             mkdir /etc/gosocks5

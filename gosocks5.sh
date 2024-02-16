@@ -3,7 +3,7 @@ All_Path=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export All_Path
 
 #脚本版本
-Shell_Version="1.1.0"
+Shell_Version="1.2.0"
 #定义输出
 Font_Green="\033[32m"
 Font_Red="\033[31m"
@@ -258,14 +258,14 @@ function Check_Port() {
 #更新脚本
 function Update_Shell() {
     echo -e "${Info} 当前版本为 [ ${Shell_Version} ]，开始检测最新版本..."
-    Shell_NewVer=$(wget --no-check-certificate -qO- "https://github.com/wf-nb/Gosocks5/blob/latest/Gosocks5.sh"|grep 'Shell_Version="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1)
+    Shell_NewVer=$(wget --no-check-certificate -qO- "https://github.com/wf-nb/Gosocks5/blob/latest/gosocks5.sh"|grep 'Shell_Version="'|awk -F "=" '{print $NF}'|sed 's/\"//g'|head -1)
     [[ -z ${Shell_NewVer} ]] && echo -e "${Error} 检测最新版本失败" && Show_Menu
     if [ $(awk -v Shell_NewVer="$Shell_NewVer" -v Shell_Version="$Shell_Version"  'BEGIN{print(Shell_NewVer>Shell_Version)?"1":"0"}') ]; then
         echo -e "${Info} 发现新版本[ ${Shell_NewVer} ]，是否更新？[Y/n]"
         read -p "(默认: Y):" Read_YN
         [[ -z "${Read_YN}" ]] && Read_YN="Y"
         if [[ ${Read_YN} == [Yy] ]]; then
-            wget -N --no-check-certificate https://github.com/wf-nb/Gosocks5/blob/latest/Gosocks5.sh && chmod +x socks5.sh
+            wget -N --no-check-certificate https://github.com/wf-nb/Gosocks5/blob/latest/gosocks5.sh && chmod +x socks5.sh
             echo -e "${Success} 脚本已更新为最新版本[ ${Shell_NewVer} ]"
             sleep 3s
             Show_Menu
